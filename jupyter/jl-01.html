@@ -45,52 +45,23 @@ MathJax.Hub.Config({
    </HEAD>
    <BODY>
 @<br/>
-Markdown<br/>
-# Jupyter<br/>
-## 1. What is it<br/>
-### 1.1 Image<br/>
+conda install -c conda-forge jupyterlab<br/>
+<br/>
+pip install jupyterlab<br/>
 <br/>
 @<br/>
-Run cell - shift enter<br/>
-<br/>
-split cell - alt enter<br/>
-<br/>
-insert cell<br/>
+JupyterLab requires the Jupyter Notebook version 4.3 or later.<br/>
 <br/>
 @<br/>
-$\frac{1}{2}$ in markdown mode<br/>
+starting<br/>
+jupyter lab<br/>
 <br/>
 @<br/>
-from IPython display import image image(url="https://raw.githubusercontent.com/.../xxx.png", width=200, height=100)<br/>
-<br/>
-<br/>
-from IPython display import YouTubeVideo YouTubeVideo("ffexeif9ffa")<br/>
+:8888/lab<br/>
+:8888/tree<br/>
 <br/>
 @<br/>
-table<br/>
-import pandas as pd<br/>
-url="https://raw.git.../xxx.csv"<br/>
-pd.read.csv(url, nrows=10)<br/>
-<br/>
-@<br/>
-chart<br/>
-import matplot.lib.pyplot as plt<br/>
-plt.plot([1,2,3,4])<br/>
-plt.ylabel('result')<br/>
-plt.show()<br/>
-<br/>
-@<br/>
-performance check<br/>
-%timeit 3+4 <br/>
-%timeit add(3,4)<br/>
-<br/>
-<br/>
-%% 를 쓰면 한 셀 전체에 적용된다<br/>
-%%timeit<br/>
-a = [1,2,3]<br/>
-a = [x+1 for x in a]<br/>
-<br/>
-<br/>
-file - download as<br/>
+collapse all code<br/>
+collapse all outputs<br/>
    </BODY>
 </HTML>
