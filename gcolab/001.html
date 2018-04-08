@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   <HEAD>
+      <TITLE>My first HTML document</TITLE>
+<style rel="stylesheet" type="text/css">
+body {
+    font-size: 25px;
+ 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+    margin-left: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 80px;
+    padding-left: 80px;
+    line-height:1.6em
+}
+</style>
+     <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    "HTML-CSS" : {
+        availableFonts : ["STIX"],
+        preferredFont : "STIX",
+        webFont : "STIX-Web",
+        imageFont : null
+    }
+});
+</script>
+     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js" type="text/javascript">    
+    MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"], 
+               equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { inlineMath: [ ['$$$','$$$'] ],
+                   displayMath: [ ['$$$$','$$$$'] ],
+                   processEscapes: true },
+        "HTML-CSS": { availableFonts: ["TeX"],
+                      linebreaks: { automatic: true } }
+    });
+</script>
+</HEAD>
+<BODY>
+<xmp>
+001. how do you use csv file on google colaboratory
+
+@
+001. how do you use csv file on google colaboratory
+import tensorflow as tf
+import numpy as np
+import io
+from google.colab import files
+
+uploaded_file=files.upload()
+
+for fn in uploaded_file.keys():
+  print("user uploaded file '{name}' with length {length} bytes"\
+          .format(name=fn,length=len(uploaded_file[fn])))
+
+uploaded_file_on_web=io.StringIO(uploaded_file["data-01-test-score.csv"].decode("utf-8"))
+
+x_and_y_data_csv=np.loadtxt(uploaded_file_on_web,delimiter=',',dtype=np.float32)
+
+
+
+    
+
+
+
+</xmp>
+</BODY>
+</HTML>
